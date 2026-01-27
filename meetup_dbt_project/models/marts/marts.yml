@@ -1,0 +1,82 @@
+version: 2
+
+models:
+
+  - name: mart_group_analytics
+    description: "Leaderboard of groups containing member counts, activity status, and topic details."
+    columns:
+      - name: group_id
+        description: "Primary key. Unique identifier for the group."
+        tests:
+          - unique
+          - not_null
+      - name: activity_status
+        description: "Categorization of group health. 'Inactive' if no events in the last 180 days."
+        tests:
+          - accepted_values:
+              values: ['Active', 'Inactive']
+      - name: total_members
+        description: "Total count of users who have joined this group."
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"
+
+  - name: mart_user_engagement
+    description: "Geographic aggregation of user density and engagement behavior."
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - country
+            - city
+    columns:
+      - name: country
+        description: "User's country of residence."
+      - name: city
+        description: "User's city of residence."
+      - name: avg_groups_per_user
+        description: "Average number of communities a user in this region joins."
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"
+
+  - name: mart_event_popularity
+    description: "Heatmap data showing event saturation by Day of Week and Hour of Day."
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - day_of_week
+            - hour_of_day
+    columns:
+      - name: day_of_week
+        description: "Day name (Mon, Tue, etc.)."
+        tests:
+          - accepted_values:
+              values: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+      - name: hour_of_day
+        description: "Hour of the event start time (0-23)."
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "between 0 and 23"
+      - name: pct_sold_out
+        description: "Percentage of events in this time slot that reached their RSVP limit."
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "between 0 and 100"
+
+  - name: mart_venue_utilization
+    description: "Performance metrics for physical venue locations."
+    columns:
+      - name: venue_id
+        description: "Primary key for venues."
+        tests:
+          - unique
+          - not_null
+      - name: avg_event_size
+        description: "Average estimated attendance (users + guests) per event."
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"
+      - name: total_foot_traffic
+        description: "Sum of all attendees across all history for this venue."

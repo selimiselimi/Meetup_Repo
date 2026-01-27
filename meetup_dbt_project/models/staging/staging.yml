@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: stg_groups
+    columns:
+      - name: group_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_users
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+
+  - name: stg_events
+    columns:
+      - name: event_id
+        tests:
+          - unique
+      - name: event_start_at
+
+  - name: stg_venues
+    columns:
+      - name: venue_id
+        tests:
+          - unique
+          - not_null

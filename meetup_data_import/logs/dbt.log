@@ -1,0 +1,75 @@
+[0m20:06:18.188534 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E201248EF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E204436600>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E203DD2DB0>]}
+
+
+============================== 20:06:18.191447 | 6426ca54-dd3f-4ed2-8977-500440f7c5c7 ==============================
+[0m20:06:18.191447 [info ] [MainThread]: Running with dbt=1.11.2
+[0m20:06:18.191447 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\drilo\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt clean', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m20:06:18.191447 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\drilo\Documents\Meetup\projects\meetup_data_import\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m20:06:18.191447 [debug] [MainThread]: Command `dbt clean` failed at 20:06:18.191447 after 0.19 seconds
+[0m20:06:18.191447 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E204134E30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E203B510A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E2045FFB00>]}
+[0m20:06:18.191447 [debug] [MainThread]: Flushing usage events
+[0m20:06:18.872679 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:28:36.757504 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000147507106B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000147500BF140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000147500BF0E0>]}
+
+
+============================== 20:28:36.761575 | aec330e0-bdd4-4ccd-94aa-34246c430d4a ==============================
+[0m20:28:36.761575 [info ] [MainThread]: Running with dbt=1.11.2
+[0m20:28:36.761575 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\drilo\\.dbt', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt build -s models/intermediate', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m20:28:36.761575 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\drilo\Documents\Meetup\projects\meetup_data_import\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m20:28:36.761575 [debug] [MainThread]: Command `dbt build` failed at 20:28:36.761575 after 0.11 seconds
+[0m20:28:36.761575 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000147507106B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000147506CFDA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000147505373B0>]}
+[0m20:28:36.761575 [debug] [MainThread]: Flushing usage events
+[0m20:28:37.383820 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:29:17.587598 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024FCC127EF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024FCF7FFCE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024FCF7FFEF0>]}
+
+
+============================== 20:29:17.592834 | e7a193a8-0059-4e33-a8fd-c72a82519104 ==============================
+[0m20:29:17.592834 [info ] [MainThread]: Running with dbt=1.11.2
+[0m20:29:17.593820 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\drilo\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt build -s project/ models/intermediate', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m20:29:17.593820 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\drilo\Documents\Meetup\projects\meetup_data_import\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m20:29:17.594889 [debug] [MainThread]: Command `dbt build` failed at 20:29:17.594889 after 0.16 seconds
+[0m20:29:17.594889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024FCF66C1A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024FCBE75820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024FCF599FA0>]}
+[0m20:29:17.594889 [debug] [MainThread]: Flushing usage events
+[0m20:29:18.386132 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:29:23.203602 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D6976F91F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D699D755B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D699D76AB0>]}
+
+
+============================== 20:29:23.207299 | e35226d4-9349-4947-b8a0-9231459064ff ==============================
+[0m20:29:23.207299 [info ] [MainThread]: Running with dbt=1.11.2
+[0m20:29:23.207299 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\drilo\\.dbt', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt build -s project/models/intermediate', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m20:29:23.208283 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\drilo\Documents\Meetup\projects\meetup_data_import\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m20:29:23.209282 [debug] [MainThread]: Command `dbt build` failed at 20:29:23.209282 after 0.14 seconds
+[0m20:29:23.209282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D696E01AC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D69A7E17F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D69A872A80>]}
+[0m20:29:23.209282 [debug] [MainThread]: Flushing usage events
+[0m20:29:23.881644 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:32:07.529456 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002092F05D9A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020930FD7800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020930FD6300>]}
+
+
+============================== 20:32:07.533993 | fac0681c-9be2-4e2c-8b8e-9aa5d26c134e ==============================
+[0m20:32:07.533993 [info ] [MainThread]: Running with dbt=1.11.2
+[0m20:32:07.534467 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\drilo\\.dbt', 'invocation_command': 'dbt build -s mart_event_popularity', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m20:32:07.534467 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\drilo\Documents\Meetup\projects\meetup_data_import\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m20:32:07.535485 [debug] [MainThread]: Command `dbt build` failed at 20:32:07.535485 after 0.13 seconds
+[0m20:32:07.535485 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209316B2A80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209315B0470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209319DF3B0>]}
+[0m20:32:07.536498 [debug] [MainThread]: Flushing usage events
+[0m20:32:08.369368 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,0 +1,67 @@
+version: 2
+
+models:
+
+  - name: int_groups_enriched
+    description: "Enriched groups data with member counts and last event activity."
+    columns:
+      - name: group_id
+        description: "Primary key for groups."
+        tests:
+          - unique
+          - not_null
+      - name: total_members
+        description: "Count of unique users in the group."
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: ">= 0" 
+      - name: days_since_last_event
+        description: "Days elapsed since the group last hosted an event."
+
+  - name: int_users_enriched
+    description: "User dimension with engagement stats (group memberships, time to RSVP)."
+    columns:
+      - name: user_id
+        description: "Primary key for users."
+        tests:
+          - unique
+          - not_null
+      - name: count_group_memberships
+        description: "Number of groups this user has joined."
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"
+      - name: days_to_first_rsvp
+        description: "Days between joining the platform and their first RSVP."
+
+  - name: int_venues_enriched
+    description: "Venues reference table including those that have never hosted events."
+    columns:
+      - name: venue_id
+        description: "Primary key for venues."
+        tests:
+          - unique
+          - not_null
+      - name: total_events_hosted
+        description: "Total count of events hosted at this venue."
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"
+      - name: is_active
+        description: "Boolean flag indicating if the venue has hosted at least one event."
+
+  - name: int_events_enriched
+    description: >
+      The central events table. Contains one row per event, enriched with 
+      venue details, calculated RSVP metrics, and capacity flags.
+    columns:
+      - name: event_id
+        description: "Primary surrogate key for events."
+        tests:
+          - unique
+          - not_null
+
+      - name: group
